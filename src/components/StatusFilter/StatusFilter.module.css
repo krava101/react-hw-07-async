@@ -1,0 +1,18 @@
+.wrapper {
+  display: flex;
+  height: 40px;
+  gap: 4px;
+}
+
+.wrapper button{
+  width: 90px;
+  height: 40px;
+  text-align: center;
+  background-color: var(--main-green);
+  border: none;
+  padding: none;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2), inset -2px 2px 5px 0 rgba(255, 255, 255, 0.4), inset 2px -2px 5px 0 rgba(0, 0, 0, 0.2);
+  color: #fff;
+  cursor: pointer;
+}

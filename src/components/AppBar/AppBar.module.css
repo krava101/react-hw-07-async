@@ -1,0 +1,25 @@
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: end;
+    background-color: var(--main-green);
+    border-radius: 10px;
+    padding: 10px;
+    color: #fff;
+    box-shadow: inset -4px 4px 10px rgba(255, 255, 255, 0.3), inset 4px -4px 8px rgba(7, 7, 7, 0.1), -10px 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+.wrapper section {
+    display: grid;
+    gap: 4px;
+}
+
+.filter{
+    height: 100px;
+}
+
+.wrapper h2 {
+    margin: 0;
+    font-size: 14pt;
+}

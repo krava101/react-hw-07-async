@@ -1,0 +1,29 @@
+.form{
+    display: flex;
+    align-items: center;
+}
+
+.field{
+    height: 40px;
+    padding: 10px;
+    border-radius: 8px 0 0 8px;
+    border: none;
+    outline: none;
+    background-color: var(--main-green);
+    color: #fff;
+}
+
+.field::placeholder{
+    color: #fff;
+}
+
+.form button{
+    height: 40px;
+    width: 60px;
+    padding: 0;
+    border-radius: 0 8px 8px 0;
+    border: none;
+    background-color: var(--main-green);
+    color: #fff;
+    text-align: center;
+}

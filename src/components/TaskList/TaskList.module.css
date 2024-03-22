@@ -1,0 +1,17 @@
+.list{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: var(--main-green);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: inset -3px 3px 10px rgba(255, 255, 255, 0.5), inset 3px -3px 7px rgba(0, 0, 0, 0.1);
+}
+
+.listItem{
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 10px;
+    color: #000;  
+    background-color: var(--mint);
+}
