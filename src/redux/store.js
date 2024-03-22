@@ -1,6 +1,22 @@
-import { createStore } from "redux";
-import { devToolsEnhancer } from "@redux-devtools/extension";
-import { rootReducer } from "./reducers";
+import { tasksReducer } from "./tasksSlice";
+import { filterReducer } from "./filterSlice";
+import { configureStore } from "@reduxjs/toolkit";
+import { persistStore, persistReducer } from 'redux-persist';
+import storage from 'redux-persist/lib/storage';
 
-const enhancer = devToolsEnhancer();
-export const store = createStore(rootReducer, enhancer);
+
+const persistTasksConfig = {
+  key: 'tasks',
+  storage,
+}
+
+const persistedTasksReducer = persistReducer(persistTasksConfig, tasksReducer);
+
+export const store = configureStore({
+  reducer: {
+    tasks: persistedTasksReducer,
+    filters: filterReducer,
+  },
+});
+
+export const persistor = persistStore(store);

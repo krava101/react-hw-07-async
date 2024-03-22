@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux';
-import { deleteTask, toggleCompleted } from '../../redux/actions';
 import { IoClose } from "react-icons/io5";
 import css from './Task.module.css';
+import { deleteTask, toggleCompleted } from '../../redux/tasksSlice';
 
 
 export const Task = ({ task }) => {
