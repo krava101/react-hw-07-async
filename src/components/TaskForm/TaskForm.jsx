@@ -1,4 +1,4 @@
-import { addTask } from '../../redux/tasksSlice';
+import { addTask } from '../../redux/operations';
 import css from './TaskForm.module.css';
 import { useDispatch } from "react-redux";
 
@@ -11,7 +11,7 @@ export const TaskForm = () => {
     if (!form.elements.text.value) {
       return alert("Field cannot be empty!")
     }
-    dispatch(addTask(form.elements.text.value));
+    dispatch(addTask(event.target.elements.text.value));
     form.reset();
   };
 
