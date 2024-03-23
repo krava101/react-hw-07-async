@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import AppBar from "../AppBar/AppBar";
+import css from './App.module.css';
 import { Layout } from "../Layout/Layout";
 import { TaskForm } from "../TaskForm/TaskForm";
 import { TaskList } from "../TaskList/TaskList";
@@ -20,7 +21,7 @@ const App = () => {
     <Layout>
       <AppBar />
       <TaskForm />
-      {isLoading && !error && <b>Request in progress...</b>}
+      {isLoading && !error && <p className={css.loading}>Request in progress...</p>}
       <TaskList/>
     </Layout>
   )
