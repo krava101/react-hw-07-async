@@ -1,17 +1,9 @@
 import { useSelector } from "react-redux";
-import { getTasks } from "../../redux/selectors";
+import { selectTaskCount} from "../../redux/selectors";
 import css from './TaskCounter.module.css';
 
 export const TaskCounter = () => {
-  const tasks = useSelector(getTasks);
-
-  const count = tasks.reduce(
-    (acc, task) => {
-      task.completed ? acc.completed += 1 : acc.active += 1;
-      return acc;
-    },
-    { active: 0, completed: 0 }
-  );
+  const count = useSelector(selectTaskCount);
 
   const percent = (count.completed / (count.completed + count.active) * 100).toFixed(0); 
   const totalPercent = isNaN(percent) ? 0 : percent;
